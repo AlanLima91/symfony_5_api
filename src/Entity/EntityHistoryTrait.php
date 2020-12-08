@@ -4,32 +4,32 @@ declare(strict_types=1);
 
 Namespace App\Entity;
 
-use DateTimeInterface;
+use DateTimeImmutable;
 
-trait EntityHistory
+trait EntityHistoryTrait
 {
-  private DateTimeInterface $createdAt;
+  private DateTimeImmutable $createdAt;
 
-  private DateTimeInterface $updatedAt;
+  private DateTimeImmutable $updatedAt;
   
-  public function getCreatedAt(): DateTimeInterface
+  public function getCreatedAt(): DateTimeImmutable
   {
     return $this->createdAt;
   }
 
-  public function setCreatedAt(DateTimeInterface $createdAt): SELF
+  public function setCreatedAt(DateTimeImmutable $createdAt): SELF
   {
     $this->createdAt = $createdAt;
 
     return $this;
   }
 
-  public function getUpdatedAt(): DateTimeInterface
+  public function getUpdatedAt(): DateTimeImmutable
   {
     return $this->updatedAt;
   }
 
-  public function setUpdatedAt(DateTimeInterface $updatedAt): SELF
+  public function setUpdatedAt(DateTimeImmutable $updatedAt): SELF
   {
     $this->updatedAt = $updatedAt;
 
