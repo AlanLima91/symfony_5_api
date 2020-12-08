@@ -7,51 +7,51 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity]
-Class User implements EntityHistoryInterface
+class User implements EntityHistoryInterface
 {
-  use EntityHistoryTrait;
+    use EntityHistoryTrait;
 
-  #[ORM\Id]
-  #[ORM\Column("int")]
-  #[ORM\GeneratedValue]
-  private int $id;
+    #[ORM\Id]
+    #[ORM\Column("int")]
+    #[ORM\GeneratedValue]
+    private int $id;
 
-  #[ORM\Column("string")]
-  private string $username;
+    #[ORM\Column("string")]
+    private string $username;
 
-  private string $password;
+    private string $password;
   
-  public function getId(): ?int
-  {
-    return $this->id;
-  }
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
 
-  public function getUsername(): string
-  {
-    return $this->username;
-  }
+    public function getUsername(): string
+    {
+        return $this->username;
+    }
 
-  public function setUsername(string $username): self
-  {
-    $this->username = $username;
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  public function getPassword(): string
-  {
-    return $this->password;
-  }
+    public function getPassword(): string
+    {
+        return $this->password;
+    }
 
-  public function setPassword(string $password): self
-  {
-    $this->password = $password;
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
 
-    return $this;
-  }
+        return $this;
+    }
 
-  public function isNew(): bool
-  {
-    return null === $this->getId();
-  }
+    public function isNew(): bool
+    {
+        return null === $this->getId();
+    }
 }

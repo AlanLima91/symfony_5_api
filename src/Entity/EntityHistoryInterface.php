@@ -8,11 +8,11 @@ use DateTimeImmutable;
 
 interface EntityHistoryInterface
 {
-  public function getCreatedAt(): ?DateTimeImmutable;
+    public function getCreatedAt(): DateTimeImmutable;
 
-  public function setCreatedAt(?DateTimeImmutable $createdAt): self;
+    public function setCreatedAt(DateTimeImmutable $createdAt): void;
 
-  public function getUpdatedAt(): ?DateTimeImmutable;
+    public function getUpdatedAt(): DateTimeImmutable;
 
-  public function setUpdatedAt(?DateTimeImmutable $updatedAt): self;
+    public function setUpdatedAt(DateTimeImmutable $updatedAt): void;
 }

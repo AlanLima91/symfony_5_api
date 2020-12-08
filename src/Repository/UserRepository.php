@@ -10,18 +10,18 @@ use Doctrine\Persistence\ManagerRegistry;
 
 class UserRepository extends ServiceEntityRepository
 {
-  private CONST ENTITY_CLASS = User::class;
+    private const ENTITY_CLASS = User::class;
 
-  public function __construct(ManagerRegistry $registry)
-  {
-    parent::__construct($registry, SELF::ENTITY_CLASS);
-  }
-
-  public function save(User $user): void
-  {
-    if ($user->isNew()) {
-      $this->getEntityManager()->persist($user);
+    public function __construct(ManagerRegistry $registry)
+    {
+        parent::__construct($registry, self::ENTITY_CLASS);
     }
-    $this->getEntityManager()->flush();
-  }
+
+    public function save(User $user): void
+    {
+        if ($user->isNew()) {
+            $this->getEntityManager()->persist($user);
+        }
+        $this->getEntityManager()->flush();
+    }
 }
