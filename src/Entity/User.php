@@ -19,8 +19,9 @@ class User implements EntityHistoryInterface
     #[ORM\Column("string")]
     private string $username;
 
+    #[ORM\Column("string")]
     private string $password;
-  
+
     public function getId(): ?int
     {
         return $this->id;

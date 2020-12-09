@@ -4,8 +4,6 @@ grumphp:
         fix_by_default: true
     tasks:
         git_commit_message: ~
-        phpcs: ~
-        phpcsfixer: ~
         phpparser: ~
         phpstan:
             autoload_file: ~ # With this parameter you can specify the path your project's additional autoload file path.

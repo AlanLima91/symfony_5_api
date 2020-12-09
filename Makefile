@@ -47,7 +47,10 @@ vendor: ## Install dependencies locally
 ##---------------------------------------------------------------------------
 ##
 
-test: test-unitaire
+test: quality test-unitaire
+
+quality:
+	$(EXEC_PHP) ./vendor/bin/grumphp run -n
 
 tu: test-unitaire
 
